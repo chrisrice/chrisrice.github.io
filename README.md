@@ -6,17 +6,17 @@ https://chrisrice.github.io/device?apName=Wispr-E44D05&password=gobadgers
 
 ### Content of JSON required in /root/.well-known/apple-app-site-association
 
-{
-  "applinks": {
-    "apps": [],
-    "details": [
-      {
-        "appID": "Z5GXLHSZ6G.com.MPR.BadgerImageClient4",
-        "paths": ["/device*"]
+    {
+      "applinks": {
+        "apps": [],
+        "details": [
+          {
+            "appID": "Z5GXLHSZ6G.com.MPR.BadgerImageClient4",
+            "paths": ["/device*"]
+          }
+         ]
       }
-    ]
-  }
-}
+    }
 
 ### Content of /root/device/Index.html 
 Which will be the "fallback" if the iPhone can't
