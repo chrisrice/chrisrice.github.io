@@ -1,10 +1,10 @@
-Current development setup:
+# Current development setup:
 
-** Data to be stored in NFC URI field:
+## Data to be stored in NFC URI field:
 
 https://chrisrice.github.io/device?apName=Wispr-E44D05&password=gobadgers
 
-** Content of JSON required in /root/.well-known/apple-app-site-association
+## Content of JSON required in /root/.well-known/apple-app-site-association
 
 {
   "applinks": {
@@ -18,7 +18,8 @@ https://chrisrice.github.io/device?apName=Wispr-E44D05&password=gobadgers
   }
 }
 
-** Content of /root/device/Index.html which will be the "fallback" if the iPhone can't
+## Content of /root/device/Index.html 
+Which will be the "fallback" if the iPhone can't
 load the app. the below launches the instagram page in the app store, to be replaced
 with our app store page.
 
@@ -44,6 +45,7 @@ with our app store page.
   </body> 
 </html>
 
+## Important Notes 
 ** See SceneDelegate.swift, "scene" functions for code that handles the incoming APName and password parameters.
 ** The app also requires the "Associated Domains" capability, configured with the domain "applinks:chrisrice.github.io?mode=developer"
 ** See target settings, Signing and Capabilities for this config
