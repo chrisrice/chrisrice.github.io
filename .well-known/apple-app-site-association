@@ -1,1 +1,63 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "Z5GXLHSZ6G.com.MPR.BadgerImageClient3",
+        "paths": ["/device*"]
+      }
+    ]
+  }
+}
+```
 
+**Replace `YOURTEAMID`** with your actual Apple Team ID:
+- Find it in Xcode: Project → Signing & Capabilities → Team → (10-character code)
+- Or in App Store Connect account settings
+
+4. Click **Commit changes**
+
+### 4. Test It Works, ok
+
+Open in browser:
+```
+https://YOUR-USERNAME.github.io/badger-device/.well-known/apple-app-site-association
+```
+
+You should see the JSON file.
+
+### 5. Configure Your App
+
+**In Xcode:**
+
+1. **Signing & Capabilities** → Add **Associated Domains**
+2. Add domain:
+```
+applinks:YOUR-USERNAME.github.io
+```
+
+### 6. Program Your NFC Tags
+
+**Tag URL format:**
+```
+https://YOUR-USERNAME.github.io/badger-device/device?mac=A0B1C2D3E4F5&ssid=BadgerESP32&pwd=password123
+```
+
+## Complete Example:
+
+**If your GitHub username is `chrisrice`:**
+
+**Repository:** `https://github.com/chrisrice/badger-device`
+
+**GitHub Pages URL:** `https://chrisrice.github.io/badger-device/`
+
+**Association file:** `https://chrisrice.github.io/badger-device/.well-known/apple-app-site-association`
+
+**NFC Tag URL:**
+```
+https://chrisrice.github.io/badger-device/device?mac=A0B1C2D3E4F5&ssid=BadgerESP32&pwd=password123
+```
+
+**Associated Domain in Xcode:**
+```
+applinks:chrisrice.github.io
