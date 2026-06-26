@@ -46,9 +46,7 @@ with our app store page.
 </html>
 
 ## Important Notes 
-** See SceneDelegate.swift, "scene" functions for code that handles the incoming APName and password parameters.
-** The app also requires the "Associated Domains" capability, configured with the domain "applinks:chrisrice.github.io?mode=developer"
-** See target settings, Signing and Capabilities for this config
-** The "mode=developer" parameter allows use of github, which might not provide JSON format as apple is looking for.  development mode is format-friendlier
-** This mode requires the phone setting "Developer->Associated Domains Development" to be checked.  In production with a real website, we should remove 
-** mode=developer and shouldn't need to switch the developer iPhone setting.
+- See SceneDelegate.swift, "scene" functions for code that handles the incoming APName and password parameters.
+- The app also requires the "Associated Domains" capability, configured with the domain "applinks:chrisrice.github.io?mode=developer". See target settings, Signing and Capabilities for this config
+- The "mode=developer" parameter allows use of github, which might not provide JSON format as apple is looking for.  development mode is format-friendlier
+- This mode requires the phone setting "Developer->Associated Domains Development" to be checked.  In production with a real website, we should remove mode=developer and shouldn't need to switch the developer iPhone setting.
